@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/juliak/DF/TryPrompt/prompt-checker/.claude/hooks/sync_claude_md.py",
+            "timeout": 200,
+            "async": true,
+            "statusMessage": "Sprawdzanie czy CLAUDE.md wymaga aktualizacji po zmianie main.py..."
+          }
+        ]
+      }
+    ]
+  }
+}
